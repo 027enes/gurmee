@@ -10,7 +10,7 @@
     async function CategoriesList(){
         const { data : categories } = await useFetch('https://dev.gurmenu.com/api/v2/restaurant/categories', {
         method: 'POST',
-
+        body: '{"restaurant":"mezbaakarakoy","locale":"tr"}'
     })
     }
 </script>
