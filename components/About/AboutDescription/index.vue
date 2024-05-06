@@ -4,7 +4,7 @@
         <div class="container">
             <h2>İşletme Hakkında</h2>
             <div class="about-content" :class="{'expanded': expanded}" @click="expanded = true">
-                <p>{{ aboutDescription.description }}</p>
+                <p v-html="aboutDescription.description"></p>
             </div>
             <div class="btn-about" :class="{'btn': btn}">
                 <button class="button-show" @click="toggleContent">Daha Fazla Göster</button>
