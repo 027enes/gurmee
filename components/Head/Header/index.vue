@@ -11,7 +11,7 @@
                 <div class="header-top-row">
                     <NuxtLink to='/' class="header-top-left ">
                         <h2>{{restaurant.data.title}}</h2>
-                        <h5>Restaurant Coffee</h5>
+                        <h5>{{ restaurant.data.slogan_or_branch }}</h5>
                     </NuxtLink>
                     <div class="header-top-right ">
                         <Language />

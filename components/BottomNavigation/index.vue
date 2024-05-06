@@ -17,12 +17,12 @@
       <section id="bottom-navigation">
         <div class="container">
           <div class="bottom-navigation-row">
-            <a href="https://gurmenu.com/tr/restaurant/lavita/hakkinda" class="navigation-item ">
+            <NuxtLink to='/about' class="navigation-item ">
               <div class="navigation-icon restaurant-name">
                 L
               </div>
               <span>Hakkında</span>
-            </a>
+            </NuxtLink>
             <a href="https://gurmenu.com/tr/restaurant/lavita">
               <div class="navigation-item  active ">
                 <div class="navigation-icon">
