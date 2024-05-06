@@ -4,9 +4,9 @@
             <section id="products">
                 <div class="container">
                     <div class="products-row rectangle">
-                        <div  v-for="category in categories.data" :key="category.id">
+<!--                        <div  v-for="category in categories.data" :key="category.id">
                             <Category :category="category"/>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
             </section>
@@ -16,10 +16,10 @@
 </template>
 
 <script setup>
-import { initializeSearchEvents } from '@/assets/js/main.js';
+/*import { initializeSearchEvents } from '@/assets/js/main.js';
     onMounted(() => {
         initializeSearchEvents();
-    });
+    });*/
     const {data : categories } =  useFetch('https://dev.gurmenu.com/api/v2/restaurant/categories', {
         method: 'POST',
         body: {
