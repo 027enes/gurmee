@@ -27,5 +27,4 @@ export default defineNuxtConfig({
     '~/assets/css/restaurant.css',
     '~/assets/css/light.css',
   ],
-  ssr: true,
 })

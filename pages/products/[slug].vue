@@ -2,7 +2,7 @@
     <div>
         <section id="products-content">
       <div class="container">
-        <div class="p-products-items products-page-items" v-for="p in products" :key="p.id">
+        <div class="p-products-items products-page-items" v-for="p in category" :key="p.id">
           <div class="p-products-item " id="openSheetgunun-corbasi11474" aria-controls="sheet">
             <div class="prod-cont">
               <div class="p-products-top">
@@ -27,7 +27,7 @@
 const route = useRoute();
 const slug = route.params.slug || '';
 const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/${slug}`;
-const { data: products } = await useFetch(uri, {
+const { data: category } = await useFetch(uri, {
   key: slug,
   method: 'POST',
   body: {
@@ -36,6 +36,8 @@ const { data: products } = await useFetch(uri, {
     category: slug,
   },
 });
+console.log('göster:',category);
+
 </script>
 <style scoped>
 
