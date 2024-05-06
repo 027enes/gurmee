@@ -1,5 +1,6 @@
 <template>
     <div>
+      <Banner v-if="!categoryPending" :title="category.data.title"/>
       <section id="products-content">
       <div class="container">
         <div class="p-products-items products-page-items">
@@ -30,6 +31,7 @@
 <script setup>
 
   import { ref } from 'vue';
+  import Banner from "~/components/Category/Banner.vue";
   const route = useRoute();
   const slug = route.params.slug || '';
   const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/`;
@@ -42,11 +44,13 @@
       category: slug,
     },
   });
-  /*const banner = ref({
+/*
+  const banner = ref({
     title: category.data.title || 'Sample Title',
     subtitle: 'Sample Banner Subtitle',
     imageUrl: category?.data?.medias?.cover?.url || '',
-  });*/
+  });
+*/
 
 
 </script>
