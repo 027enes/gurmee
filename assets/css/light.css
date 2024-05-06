@@ -476,7 +476,7 @@ button[type="reset"] {
 .p-products-items .p-products-item .products-item-text .products-titlee{
     font-size: 16px;
     color: #6C6C6C;
-    max-width: 165px;
+    max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -847,7 +847,7 @@ body.active{
 }
 
 .swiper-pagination-bullet{
-    background: #9C9C9C !important;
+    background: #ff0000 ;
     opacity: .7 !important;
 }
 /*about-slider end*/
@@ -1263,9 +1263,9 @@ footer svg path{
     position: relative;
 }
 
-.p-products-items .p-products-item .products-item-img {
+/*.p-products-items .p-products-item .products-item-img {
     height: auto;
-}
+}*/
 
 .popup-image {
     width: 100%;

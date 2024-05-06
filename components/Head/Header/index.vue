@@ -15,8 +15,6 @@
                     </NuxtLink>
                     <div class="header-top-right ">
                         <Language />
-
-
                     </div>
                 </div>
             </div>
