@@ -16,10 +16,6 @@
 </template>
 
 <script setup>
-import { initializeSearchEvents } from '@/assets/js/main.js';
-    onMounted(() => {
-        initializeSearchEvents();
-    });
     const {data : categories } =  useFetch('https://dev.gurmenu.com/api/v2/restaurant/categories', {
         method: 'POST',
         body: {

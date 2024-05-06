@@ -26,6 +26,7 @@
 </template>
 
 <script setup>
+    import Language from '~/components/Head/language/index.vue';
 
     const { data: restaurant } = useFetch('https://dev.gurmenu.com/api/v2/restaurant', {
         method: 'POST',
