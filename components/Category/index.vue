@@ -2,7 +2,7 @@
   <div>
     <div>
 
-    <NuxtLink :to="'/products/' + category.slug" :key="category.id" class="products-item  sag-bg" >
+    <NuxtLink :to="'/categories/' + category.slug" :key="category.id" class="products-item  sag-bg" >
       <div class="products-img">
         <img alt="ATIŞTIRMALIKLAR" :src="category.medias.cover.url" loading="lazy"/>
       </div>

@@ -26,7 +26,7 @@
 
 const route = useRoute();
 const slug = route.params.slug || '';
-const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/${slug}`
+const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/`
 const { data: category } = await useFetch(uri, {
   key: slug,
   method: 'POST',
