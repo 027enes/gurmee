@@ -7,7 +7,7 @@
             <div class="prod-cont">
               <div class="p-products-top">
                 <div class="products-item-img">
-                  <img :src="p.medias.cover.url" alt="product image" />
+                  <img :src="p.medias.cover?.url" alt="product image" />
                 </div>
                 <div class="products-item-text">
                   <h2 class="products-titlee">{{ p.title }}</h2>
