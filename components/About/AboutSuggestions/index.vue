@@ -1,43 +1,37 @@
 <template>
     <div>
-        <section id="address">
+      <section id="address">
         <div class="container">
-
-            <div class="opinion">
-                <button class="opinion-btn"  @click="open">
-                    Görüş ve Önerileriniz
-                </button>
-            </div>
+          <div class="opinion">
+            <button class="opinion-btn" @click="openBottomSheet">
+              Görüş ve Önerileriniz
+            </button>
+          </div>
         </div>
-    </section>
-    <template>
-        <vue-bottom-sheet ref="myBottomSheet">
-            <h1>Lorem Ipsum</h1>
-            <h2>What is Lorem Ipsum?</h2>
-            <p>
-            <strong>Lorem Ipsum</strong> is simply dummy text
-            </p>
-        </vue-bottom-sheet>
-    </template>
+      </section>
+      <vue-bottom-sheet ref="sheetsScore" class="bottomSheet" :max-height="1000">
+        <AboutBottomSheet  />
+      </vue-bottom-sheet>
     </div>
-</template>
-
-<script setup>
+  </template>
+  
+  <script setup>
+    import AboutBottomSheet from "@/components/BottomSheets/About/index.vue";
 import VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
 import  "@webzlodimir/vue-bottom-sheet/dist/style.css";
 import { ref } from "vue";
 
-const myBottomSheet = ref(null)
+const sheetsScore = ref(null)
 
-const open = () => {
-  myBottomSheet.value.open();
+const openBottomSheet = () => {
+    sheetsScore.value.open();
 }
 
 const close = () => {
-  myBottomSheet.value.close();
+    sheetsScore.value.close();
 }
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+  </script>
+  
+  <style lang="scss" scoped>
+  </style>
+  

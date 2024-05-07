@@ -15,3 +15,6 @@
     align-items: center;
     justify-content: center;
 }
+.bottom-sheet__main{
+    padding: 10px;
+}
