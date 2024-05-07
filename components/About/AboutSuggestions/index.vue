@@ -10,7 +10,7 @@
         </div>
       </section>
       <client-only>
-        <vue-bottom-sheet ref="sheetsScore" class="bottomSheet" :max-height="1000">
+        <vue-bottom-sheet ref="sheetsScore"  :max-height="1000">
           <BottomSheetsAbout />
         </vue-bottom-sheet>
     </client-only>
