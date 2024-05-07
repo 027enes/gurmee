@@ -18,3 +18,10 @@
 .bottom-sheet__main{
     padding: 10px;
 }
+.rectangle .products-link{
+    height: 100%;
+    display: block;
+}
+.rectangle .products-link .products-img{
+    height: 100%;
+}
