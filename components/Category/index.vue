@@ -1,6 +1,4 @@
 <template>
-  <div>
-    <div>
 
     <NuxtLink :to="'/categories/' + category.slug" :key="category.id" class="products-item  sag-bg" >
       <div class="products-img">
@@ -11,8 +9,6 @@
       </div>
     </NuxtLink>
 
-  </div>
-    </div>
 </template>
 
 <script setup>
