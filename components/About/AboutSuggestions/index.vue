@@ -9,16 +9,19 @@
           </div>
         </div>
       </section>
+      <client-only>
       <vue-bottom-sheet ref="sheetsScore" class="bottomSheet" :max-height="1000">
         <AboutBottomSheet  />
       </vue-bottom-sheet>
+    </client-only>
     </div>
   </template>
   
   <script setup>
-    import AboutBottomSheet from "@/components/BottomSheets/About/index.vue";
-import VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
+  import VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
 import  "@webzlodimir/vue-bottom-sheet/dist/style.css";
+    import AboutBottomSheet from "@/components/BottomSheets/About/index.vue";
+
 import { ref } from "vue";
 
 const sheetsScore = ref(null)

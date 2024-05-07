@@ -2,7 +2,7 @@
     <div>
         <h1>Puanlayın</h1>
         <form method="post" class="form-star">
-          <input type="hidden" name="_token" value="K7mvXAdvGn3KzBESSyRDTuETitP7rl9GeWZcxmSg" autocomplete="off">
+          <input type="hidden" autocomplete="off">
           <input id="restaurant_id" type="hidden" name="restaurant_id" value="60">
   
           <!-- Menu Rating -->
