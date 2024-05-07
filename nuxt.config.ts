@@ -37,6 +37,7 @@ export default defineNuxtConfig({
       ],
     },
   },
+  target: 'serverless',
   css: [
     '~/assets/css/reset.css',
     '~/assets/css/restaurant.css',  
