@@ -4,7 +4,7 @@
     <section id="socials">
       <div class="container">
         <Swiper
-            class="aboutSlider"
+            class="about-Slider"
             :loop="false"
             :modules="[ Autoplay, Scrollbar]"
             :slides-per-view="slidesPerView"
