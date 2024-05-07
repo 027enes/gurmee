@@ -1,24 +1,26 @@
 <template>
     <div>
         <section id="p-about-desc">
-        <div class="container">
-            <h2>İşletme Hakkında</h2>
-            <div class="about-content" :class="{'expanded': expanded}" @click="expanded = true">
-                <p v-html="aboutDescription.description"></p>
+            <div class="container">
+                <h2>İşletme Hakkında</h2>
+                <div class="about-content" :class="{'expanded': expanded}" @click="expanded = true">
+                    <p v-html="aboutDescription.description"></p>
+                </div>
+                <div class="btn-about" :class="{'btn': btn}">
+                    <button class="button-show" @click="toggleContent">
+                        Daha Fazla Göster
+                    </button>
+                    <nuxt-icon name="back" class="icon-font"></nuxt-icon>
+
+                </div>
             </div>
-            <div class="btn-about" :class="{'btn': btn}">
-                <button class="button-show" @click="toggleContent">Daha Fazla Göster</button>
-                <i class="fa-solid fa-chevron-left"></i>
-            </div>
-        </div>
-    </section>
+        </section>
     </div>
 </template>
 
 <script setup>
     import {ref} from 'vue';
-    const { AboutDescription } = defineProps(['aboutDescription']);
-
+    const { aboutDescription } = defineProps(['aboutDescription']);
     const expanded = ref(false);
     const btn = ref(false);
     const toggleContent = () => {
@@ -28,5 +30,4 @@
 </script>
 
 <style lang="scss" scoped>
-
 </style>

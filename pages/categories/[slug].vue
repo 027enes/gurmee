@@ -1,6 +1,6 @@
 <template>
     <div>
-      <Banner v-if="!categoryPending" :title="category.data.title"/>
+      <Banner v-if="!categoryPending" :title="category.data.title" :image="category.data.medias.cover.url"/>
       <section id="products-content">
       <div class="container">
         <div class="p-products-items products-page-items">

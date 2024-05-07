@@ -459,11 +459,12 @@ button[type="reset"] {
     position: relative;
 }
 .p-products-items .p-products-item .products-item-img{
-    height: 60px;
-    width: auto;
+    height: 80px;
+    width: 80px;
 }
 .p-products-items .p-products-item .products-item-img img{
     height: 100%;
+    width: 100%;
 }
 .p-products-items .p-products-item .products-item-text{
     display: flex;
