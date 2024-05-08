@@ -25,6 +25,7 @@ const openProductSheet = () => {
        </div>
      </div>
    </div>
+   <client-only>
    <vue-bottom-sheet ref="productSheet" :max-height="1000">
      <main class="body fill column">
        <div class="sheets-img">
@@ -47,6 +48,7 @@ const openProductSheet = () => {
        </div>
      </main>
    </vue-bottom-sheet>
+</client-only>
  </div>
 </template>
 
