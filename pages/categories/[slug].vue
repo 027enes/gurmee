@@ -21,7 +21,7 @@
             Kategoriler bekleniyor...
           </template>
          <template v-else>
-           <div class="p-products-item " id="openSheetgunun-corbasi11474" aria-controls="sheet" v-for="p in category.data.items" :key="p.id">
+           <div class="p-products-item"  @click="openSheet(p)"  v-for="p in category.data.items" :key="p.id">
              <div class="prod-cont">
                <div class="p-products-top">
                  <div class="products-item-img">
@@ -39,12 +39,24 @@
       </div>
     </section>
     </div>
+    <client-only>
+        <vue-bottom-sheet ref="categorSheets" :max-height="1000">
+          <categorySheet
+    :title="selectedProduct.title"
+    :price="selectedProduct.price"
+    :image="selectedProduct.medias.cover?.url"
+    :description="selectedProduct.description"
+    :allergens="selectedProduct.allergens"
+/>
+        </vue-bottom-sheet>
+    </client-only>
 </template>
 
 <script setup>
 
   import { ref } from 'vue';
   import Banner from "~/components/Category/Banner.vue";
+  import categorySheet from "~/components/CategorySheets/index.vue";
   const route = useRoute();
   const slug = route.params.slug || '';
   const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/`;
@@ -64,7 +76,21 @@
     imageUrl: category?.data?.medias?.cover?.url || '',
   });
 */
+import VueBottomSheet from "@webzlodimir/vue-bottom-sheet";
+import  "@webzlodimir/vue-bottom-sheet/dist/style.css";
 
+
+const categorSheets = ref(null);
+const selectedProduct = ref(null);
+
+const openSheet = (product) => {
+    selectedProduct.value = product;
+    categorSheets.value.open();
+};
+
+const close = () => {
+    categorSheets.value.close();
+};
 
 </script>
 <style scoped>
