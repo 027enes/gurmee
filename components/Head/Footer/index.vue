@@ -148,7 +148,7 @@
           </div>
         </div>
       </footer>
-      <Search />
+<!--      <Search />-->
 
     </div>
 </template>

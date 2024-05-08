@@ -56,10 +56,5 @@ export default defineNuxtConfig({
         trailingSlash: undefined // can be 'append' or 'remove'
       }
     }
-  },
-  content: {
-    experimental: {
-      search: true
-    }
-  },
+  }
 })

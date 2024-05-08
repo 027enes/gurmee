@@ -1,13 +1,12 @@
 <template>
     <div>
-        <main class="body fill column">
+        <main class="body fill column" v-if="selectedProduct">
             <div class="sheets-img">
-                <img :src="image" alt="Product Image" />
+                <img :src="selectedProduct.medias.cover?.url" alt="Product Image" />
             </div>
-
             <div class="sheets-title-row products-item-text">
-                <h2 class="products-title">{{ title }}</h2>
-                <h2 class="products-sell">{{ price }}₺</h2>
+                <h2 class="products-title">{{ selectedProduct.title }}</h2>
+                <h2 class="products-sell">{{ selectedProduct.price }}₺</h2>
             </div>
 
             <div class="sheets-text-cal">
@@ -15,9 +14,9 @@
             </div>
 
             <div class="sheet-desc">
-                <p>{{ description }}</p>
+                <p>{{ selectedProduct.description }}</p>
                 <p>
-                    <b>Alerjenler:</b> {{ allergens }}
+                    <b>Alerjenler:</b> {{ selectedProduct.allergens }}
                 </p>
             </div>
         </main>
@@ -26,11 +25,7 @@
 
 <script setup lang="ts">
 const props = defineProps({
-    title: String,
-    price: Number,
-    image: String,
-    description: String,
-    allergens: String
+  selectedProduct: Object,
 });
 </script>
 
