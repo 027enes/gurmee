@@ -7,7 +7,6 @@
   
           <div class="star-row">
             <h5>Menü</h5>
-        test
 
             <div class="clasificacion">
               <input id="menu5" type="radio" name="menuRating" value="5" >

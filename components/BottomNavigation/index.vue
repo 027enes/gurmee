@@ -17,14 +17,14 @@
       <section id="bottom-navigation">
         <div class="container">
           <div class="bottom-navigation-row">
-            <NuxtLink to='/about' class="navigation-item ">
+            <NuxtLink to='/about' class="navigation-item " activeClass="active">
               <div class="navigation-icon restaurant-name">
                 L
               </div>
               <span>Hakkında</span>
             </NuxtLink>
-            <a href="https://gurmenu.com/tr/restaurant/lavita">
-              <div class="navigation-item  active ">
+            <NuxtLink href="/" class="navigation-item" activeClass="active">
+
                 <div class="navigation-icon">
                   <svg width="20" height="20" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -36,8 +36,8 @@
                   </svg>
                 </div>
                 <span>Menü</span>
-              </div>
-            </a>
+
+            </NuxtLink>
             <button class="navigation-item" v-on:click="isSearchActive = !isSearchActive">
               <div class="navigation-icon">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -77,5 +77,7 @@
     backdrop-filter: blur(10.5px);
     z-index: 99;
   }
-  
+  .active{
+    color: #FFD700;
+  }
   </style>

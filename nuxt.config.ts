@@ -5,6 +5,7 @@ export default defineNuxtConfig({
     'nuxt-icons',
     'nuxt-swiper',
   ],
+  
   swiper: {
     // Swiper options
     //----------------------
@@ -14,6 +15,7 @@ export default defineNuxtConfig({
   },
 
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       title: 'Restaurant Reviews',
       meta: [
@@ -44,5 +46,16 @@ export default defineNuxtConfig({
     '~/assets/css/light.css',
     '~/assets/css/custom.css',
   ],
-
+  experimental: {
+    defaults: {
+      nuxtLink: {
+        componentName: 'NuxtLink',
+        externalRelAttribute: 'noopener noreferrer',
+        activeClass: 'router-link-active',
+        exactActiveClass: 'router-link-exact-active',
+        prefetchedClass: undefined, // can be any valid string class name
+        trailingSlash: undefined // can be 'append' or 'remove'
+      }
+    }
+  },
 })

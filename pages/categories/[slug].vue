@@ -1,5 +1,12 @@
 <template>
-    <div>
+    <div v-if="pending">
+        <h1>Loading...</h1>
+    </div>
+      <div v-else-if="error">
+        <h1>There was an error</h1>
+        <pre>{{ error }}</pre>
+      </div>
+    <div v-else>
       <Banner v-if="!categoryPending" :title="category.data.title" :image="category.data.medias.cover.url"/>
       <section id="products-content">
       <div class="container">
@@ -35,7 +42,7 @@
   const route = useRoute();
   const slug = route.params.slug || '';
   const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/`;
-  const { data: category, pending: categoryPending } = await useFetch(uri, {
+  const { data: category, pending: categoryPending , error, pending} = await useFetch(uri, {
     key: slug,
     method: 'POST',
     body: {
