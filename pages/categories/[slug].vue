@@ -32,6 +32,7 @@
 </template>
 
 <script setup>
+  import Banner from "~/components/Category/Banner.vue";
 
 const route = useRoute();
 const slug = route.params.slug || '';

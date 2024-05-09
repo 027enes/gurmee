@@ -1,5 +1,5 @@
 <template>
-<!--    <section id="search" :class="{active: isSearchActive}">
+    <section id="search" :class="{active: isSearchActive}">
       <div class="container">
         <div class="search-top">
           <div class="search-title">
@@ -12,7 +12,7 @@
         </div>
        <Search/>
       </div>
-    </section>-->
+    </section>
     <div class="bottom-navigation">
       <section id="bottom-navigation">
         <div class="container">
@@ -63,8 +63,8 @@
   </template>
   
   <script setup>
-  // import Search from "~/components/Head/Search/index.vue";
-  // const isSearchActive = ref(false);
+   import Search from "~/components/Head/Search/index.vue";
+   const isSearchActive = ref(false);
   </script>
   
   <style>
