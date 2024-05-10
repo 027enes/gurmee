@@ -3,7 +3,7 @@
     <form @submit.prevent="fetchData">
       <div class="search-input">
         <label for="search-input"></label>
-        <input id="search-input" v-model="searchTerm" type="text" placeholder="Arama yapın..." @input="updateSearch">
+        <input id="search-input" v-model="searchInput" type="text" placeholder="Arama yapın..." >
         <button type="submit">Search</button>
         <button type="reset" @click="resetSearch"><i class="fa-regular fa-circle-xmark"></i></button>
       </div>
@@ -24,7 +24,7 @@
 
 
 <script  setup>
-  const {data : search, pending} =  useFetch('https://dev.gurmenu.com/api/v2/restaurant/items/search', {
+  const {data : search, pending ,searchString: string} =  useFetch('https://dev.gurmenu.com/api/v2/restaurant/items/search', {
     method: 'POST',
     body: {
       restaurant: 'mezbaakarakoy',
@@ -32,6 +32,7 @@
       search: 'pizza',
     },
   });
+
 </script>
 
 <style lang="scss" scoped>

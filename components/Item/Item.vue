@@ -16,7 +16,14 @@ const openProductSheet = () => {
      <div class="prod-cont">
        <div class="p-products-top">
          <div class="products-item-img">
-           <img :src="product.medias.cover?.url" alt="product image"/>
+           <NuxtImg 
+            :src="product.medias.cover?.conversions.optimized.url" 
+            alt="product image"
+            :placeholder="product.medias.cover?.conversions.optimized.placeholder"
+            loading="lazy"
+            width="product.medias.cover?.conversions.optimized.width"
+            height="product.medias.cover?.conversions.optimized.height"  
+          />
          </div>
          <div class="products-item-text">
            <h2 class="products-titlee">{{ product.title }}</h2>
@@ -29,7 +36,14 @@ const openProductSheet = () => {
    <vue-bottom-sheet ref="productSheet" :max-height="1000">
      <main class="body fill column">
        <div class="sheets-img">
-         <img :src="product.medias.cover?.url" alt="Product Image" />
+         <NuxtImg 
+            :src="product.medias.cover?.conversions.optimized.url" 
+            alt="product image"
+            :placeholder="product.medias.cover?.conversions.optimized.placeholder"
+            loading="lazy"
+            width="product.medias.cover?.conversions.optimized.width"
+            height="product.medias.cover?.conversions.optimized.height"   
+        />
        </div>
        <div class="sheets-title-row products-item-text">
          <h2 class="products-title">{{ product.title }}</h2>

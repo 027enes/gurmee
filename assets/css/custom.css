@@ -1,6 +1,19 @@
 .icon-font svg{
     font-size: 24px;
 }
+.square .products-item .products-img img{
+  object-position: left;
+}
+.lang-content li a{
+    width: 30px;
+}
+.products-item{
+  border-radius: 10px;
+  overflow: hidden;
+}
+.square .sag-bg:after{
+  border-radius: 10px;
+}
 .slide-socials .socials-color{
     color: #fff;
 }
@@ -449,7 +462,7 @@ body, html{
 #products-content{
     flex: 1;
 }
-.sag-bg:after {
+.rectangle2.sag-bg:after {
     content: '';
     position: absolute;
     top: 0;

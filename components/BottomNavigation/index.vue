@@ -64,7 +64,7 @@
   
   <script setup>
    //import Search from "~/components/Head/Search/index.vue";
-   // const isSearchActive = ref(false);
+   //const isSearchActive = ref(false);
   </script>
   
   <style>

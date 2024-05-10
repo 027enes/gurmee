@@ -14,7 +14,13 @@
         <NuxtLink to="/" class="errorBtn">Anasayfaya Dön</NuxtLink>
       </div>
       <div v-else>
-      <Banner v-if="!categoryPending" :title="category.data.title" :image="category.data.medias.cover.url"/>
+      <Banner v-if="!categoryPending" 
+        :title="category.data.title" 
+        :image="category.data.medias.cover.conversions.optimized.url"
+        :placeholder="category.data.medias.cover.conversions.optimized.placeholder"
+        :width="category.data.medias.cover.conversions.optimized.width"
+        :height="category.data.medias.cover.conversions.optimized.height"
+      />
         <section id="products-content">
           <div class="container">
             <div class="p-products-items products-page-items">

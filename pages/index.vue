@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div v-if="pending" >
-                <div>Loading...</div>
-            </div>
+        <div v-if="pending">
+        <USkeleton animation="wave" width="100%" height="20px"></USkeleton>
+        </div>
         <div v-else>
             <section id="line"></section>
             <section id="products">
