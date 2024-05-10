@@ -7,6 +7,14 @@
 .lang-content li a{
     width: 30px;
 }
+.search-top .search-close .fa-x{
+  padding: 2px;
+
+}
+.search-top .search-close .fa-x svg{
+  font-size: 18px;
+  margin-bottom: 0 !important;
+}
 .products-item{
   border-radius: 10px;
   overflow: hidden;

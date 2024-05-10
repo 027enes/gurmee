@@ -1,18 +1,18 @@
 <template>
-    <!--<section id="search" :class="{active: isSearchActive}">
+    <section id="search" :class="{active: isSearchActive}">
       <div class="container">
         <div class="search-top">
           <div class="search-title">
             <h2>Arama Yap</h2>
           </div>
           <div class="search-close" v-on:click="isSearchActive = !isSearchActive">
-            <i class="fa-solid fa-x"></i>
+            <nuxt-icon name="close" class="icon-font fa-x"></nuxt-icon>
             <span>Kapat</span>
           </div>
         </div>
        <Search/>
       </div>
-    </section>-->
+    </section>
     <div class="bottom-navigation">
       <section id="bottom-navigation">
         <div class="container">
@@ -63,8 +63,8 @@
   </template>
   
   <script setup>
-   //import Search from "~/components/Head/Search/index.vue";
-   //const isSearchActive = ref(false);
+   import Search from "~/components/Search/index.vue";
+   const isSearchActive = ref(false);
   </script>
   
   <style>
