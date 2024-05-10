@@ -8,8 +8,6 @@
                 :navigation="false"
                 :slides-per-view="1"
                 :space-between="150"
-                @slideChange="onSlideChange"
-                @swiper="onSwiper"
                 :pagination="{ clickable: true }"
                 :draggable="true"
             >

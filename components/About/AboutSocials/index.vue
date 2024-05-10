@@ -11,8 +11,6 @@
             :space-between="20"
             :breakpoints="breakpoints"
             :scrollbar="{ draggable: true, hide: false }" 
-            @slideChange="onSlideChange"
-            @swiper="onSwiper"
             :draggable="true"
         >
           <swiper-slide>

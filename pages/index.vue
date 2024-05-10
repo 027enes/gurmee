@@ -8,7 +8,7 @@
             <section id="products">
                 <div class="container">
                     <div class="products-row rectangle">
-                        <div class="products-item"  v-for="category in categories.data" :key="category.id" >
+                        <div class="products-item"  v-for="category in categories" :key="category.id" >
                             <Category :category="category"/>
                         </div>
                     </div>
