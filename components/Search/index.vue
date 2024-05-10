@@ -24,7 +24,7 @@
   
   
   <script  setup>
-    const {data : search, pending} =  useFetch('https://dev.gurmenu.com/api/v2/restaurant/items/search', {
+    const {data : search, pending} = useFetch('https://dev.gurmenu.com/api/v2/restaurant/items/search', {
       method: 'POST',
       body: {
         restaurant: 'mezbaakarakoy',
