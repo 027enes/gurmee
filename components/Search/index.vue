@@ -87,7 +87,6 @@ async function fetchData() {
     });
 
     const data = await response.json(); // Gelen yanıtı JSON olarak ayrıştır
-    console.log('Fetched data:', data); // Gelen veriyi konsola yazdır
 
     searchResult.value = {
       searchResults: data.data.length ? data.data : [], // Eğer veri varsa veriyi ayarla, yoksa boş bir dizi ayarla
