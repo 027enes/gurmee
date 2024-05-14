@@ -6,7 +6,13 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@nuxt/image',
   ],
-  
+  proxy: {
+    '/api/': {
+      target: 'https://dev.gurmenu.com',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true,
+    },
+  },
   swiper: {
     // Swiper options
     //----------------------

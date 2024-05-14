@@ -4,6 +4,22 @@
 .square .products-item .products-img img{
   object-position: left;
 }
+.not-page{
+  width: 100%;
+  justify-content: center !important;
+}
+.not-page .products-titlee{
+  font-size: 16px;
+  color: #6C6C6C;
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.p-products-items .p-products-item{
+  cursor: pointer;
+}
 .lang-content li a{
     width: 30px;
 }
@@ -503,7 +519,7 @@ body, html{
     border-radius: 10px;
 }
 .p-products-items .p-products-item .products-item-text{
-    width: 80% !important;
+    width: 80%;
     padding-right: 0 !important;
 }
 .p-products-items .p-products-item .products-item-text .products-titlee{

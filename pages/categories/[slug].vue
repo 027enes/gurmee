@@ -1,5 +1,6 @@
 <template>
   <div>
+
       <div v-if="pending">
         <h1>Loading...</h1>
       </div>
@@ -52,6 +53,7 @@ const {data: category, pending: categoryPending, error, pending} = await useFetc
     category: slug,
   },
 })
+
 </script>
 <style scoped>
 

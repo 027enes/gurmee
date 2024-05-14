@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Head>
+    <!--<Head>
       <Link rel="icon" :href="restaurant.data.medias.favicon.url"/>
       <link rel="icon" type="image/x-icon" :href="restaurant.data.medias.favicon.url">
       <Meta name="description" :content="restaurant.data.meta.description"/>
       <Meta name="og:site_name" :content="restaurant.data.meta.title"/>
       <Meta name="og:image" :content="restaurant.data.meta.og_image"/>
-    </Head>
+    </Head>-->
     <NuxtLoadingIndicator />
     <Header/>
     <slot/>

@@ -443,14 +443,22 @@ button[type="reset"] {
     gap: 10px;
 
 }
+.products-title{
+font-size: 16px;
+color: #9C9C9C;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+font-weight: 500;
+}
 #search .p-products-items .p-products-item .search-item-text{
     display: flex;
     align-items: center;
 }
 .p-products-items .p-products-item{
-    border: 1px solid #E9E9E9;
+    background: #1B1B1C;
+    border: 1px solid #2D2E30;
     border-radius: 10px;
-    background: #EEE;
     min-height: 75px;
     overflow: hidden;
     margin: 15px 0;
