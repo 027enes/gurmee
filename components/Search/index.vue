@@ -20,11 +20,11 @@
             <div class="products-item-img">
               <!-- Ürün görseli -->
               <NuxtImg alt="ATIŞTIRMALIKLAR" 
-                :src="item.medias.cover.conversions.optimized.url"  <!-- Ürün görselinin URL'si -->
-                :placeholder="item.medias.cover.conversions.optimized.placeholder" <!-- Görsel yüklenirken gösterilecek placeholder -->
-                loading="lazy" <!-- Görselin tembel yüklenmesini sağlar -->
-                height="item.medias.cover.conversions.optimized.height" <!-- Görsel yüksekliği -->
-                width="item.medias.cover.conversions.optimized.width"  <!-- Görsel genişliği -->
+                :src="item.medias.cover.conversions.optimized.url"  
+                :placeholder="item.medias.cover.conversions.optimized.placeholder" 
+                loading="lazy"
+                height="item.medias.cover.conversions.optimized.height" 
+                width="item.medias.cover.conversions.optimized.width" 
               />
             </div>
             <div class="products-item-text">
