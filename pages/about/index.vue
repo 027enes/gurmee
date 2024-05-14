@@ -1,8 +1,8 @@
 <template>
     <div>
         <main class="about-height">
-            <AboutSlider :aboutSlider="restaurant.data"/>
-            <AboutDescription :aboutDescription="restaurant.data"/>
+            <AboutSlider :aboutSlider="restaurant?.data"/>
+            <AboutDescription :aboutDescription="restaurant?.data"/>
             <AboutSocials />
             <AboutSuggestions />
         </main>
@@ -23,7 +23,6 @@ const { data: restaurant } = useFetch('https://dev.gurmenu.com/api/v2/restaurant
             locale: 'tr'
         }
 })
-
 
 </script>
 

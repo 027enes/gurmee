@@ -41,10 +41,11 @@ export default defineNuxtConfig({
     },
   },
   css: [
-    '~/assets/css/reset.css',
+    /*'~/assets/css/reset.css',
     '~/assets/css/restaurant.css',  
-    '~/assets/css/light.css',
+    '~/assets/css/light.css',*/
     '~/assets/css/custom.css',
+    '~/assets/css/style.css',
   ],
   experimental: {
     defaults: {

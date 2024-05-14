@@ -1,6 +1,5 @@
 <template>
   <div>
-
       <div v-if="pending">
         <h1>Loading...</h1>
       </div>
@@ -40,7 +39,7 @@
 
 <script setup>
   import Banner from "~/components/Category/Banner.vue";
-
+import { ref, watch } from 'vue';
 const route = useRoute();
 const slug = route.params.slug || '';
 const uri = `https://dev.gurmenu.com/api/v2/restaurant/category/`;
@@ -53,7 +52,9 @@ const {data: category, pending: categoryPending, error, pending} = await useFetc
     category: slug,
   },
 })
-
+useHead({
+  title: 'test'
+})
 </script>
 <style scoped>
 
