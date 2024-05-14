@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Puanlayın</h1>
+      <h1 class="AboutSheetTitle">Puanlayın</h1>
         <form method="post" class="form-star">
           <input type="hidden" autocomplete="off">
           <input id="restaurant_id" type="hidden" name="restaurant_id" value="60">
