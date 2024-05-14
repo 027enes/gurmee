@@ -27,7 +27,7 @@ const openProductSheet = () => {
          </div>
          <div class="products-item-text">
            <h2 class="products-titlee">{{ product.title }}</h2>
-           <h2 class="products-sell">{{ product.price }} {{ product.currency }}</h2>
+           <h2 class="products-sell">{{ product.price }}{{ product.currency }}</h2>
          </div>
        </div>
      </div>
