@@ -8,6 +8,18 @@
   width: 100%;
   justify-content: center !important;
 }
+.price-width{
+  width: 100% !important;
+  max-width: unset !important;
+}
+.sheets-title-row{
+  gap: 10px;
+}
+.products-title{
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+}
 .not-page .products-titlee{
   font-size: 16px;
   color: #6C6C6C;
@@ -16,6 +28,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 500;
+}
+.bottom-sheet{
+  z-index: 9999999999999 !important;
+}
+.bottom-sheet__content{
+  background: #1B1B1C !important;
 }
 .p-products-items .p-products-item{
   cursor: pointer;

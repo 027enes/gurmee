@@ -16,23 +16,7 @@
       <template v-if="searchResult.searchResults.length"> <!-- Eğer arama sonuçları varsa bu template çalışır -->
         <!-- Her bir arama sonucu için bir öğe oluştur -->
         <template v-for="item in searchResult.searchResults" :key="item.id"> <!-- Arama sonuçları üzerinden döngü yaparak her bir sonuç için bir div oluşturur -->
-          <div class="p-products-item" @click="openBottomSheet"> <!-- Ürün tıklandığında openBottomSheet fonksiyonunu çağırır -->
-            <div class="products-item-img">
-              <!-- Ürün görseli -->
-              <NuxtImg alt="ATIŞTIRMALIKLAR" 
-                :src="item.medias.cover.conversions.optimized.url"  
-                :placeholder="item.medias.cover.conversions.optimized.placeholder" 
-                loading="lazy"
-                height="item.medias.cover.conversions.optimized.height" 
-                width="item.medias.cover.conversions.optimized.width" 
-              />
-            </div>
-            <div class="products-item-text">
-              <!-- Ürün başlığı ve fiyatı -->
-              <h2 class="products-title">{{ item.title }}</h2> <!-- Ürün başlığını gösterir -->
-              <h2 class="products-sell">{{ item.price }} {{ item.currency }}</h2> <!-- Ürün fiyatını ve para birimini gösterir -->
-            </div>
-          </div>
+          <SearchItem :item="item"/>
         </template>
       </template>
       <!-- Arama sonuçları yoksa ve hata varsa -->
@@ -49,6 +33,7 @@
 
 
 <script setup>
+import SearchItem  from './Item.vue';
 import { ref, watch } from 'vue'; // Vue'den ref ve watch fonksiyonlarını import ediyoruz
 import { useDebounceFn } from '@vueuse/core'; // @vueuse/core'dan useDebounceFn fonksiyonunu import ediyoruz
 
