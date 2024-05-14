@@ -23,7 +23,7 @@
           </div>
   
           <div class="sheet-message">
-                            <textarea class="n-message" name="comment" id="" cols="30" rows="3"
+                            <textarea class="n-message" name="comment" id="" cols="30" rows="5"
                                       placeholder="Görüş veya önerileriniz"></textarea>
                     </div>
                     <button class="sheet-submit" type="submit">Gönder</button>
