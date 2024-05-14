@@ -13,11 +13,10 @@
             :scrollbar="{ draggable: true, hide: false }" 
             :draggable="true"
         >
-          <swiper-slide>
+          <swiper-slide v-for="i in 8" :key="i">
             <div class="slide-socials" data-bs-toggle="modal" data-bs-target="#address-modal">
               <div class="socials-content">
                 <nuxt-icon name="instagram" class="Socials"></nuxt-icon>
-                
               </div>
               <span>Instagram</span>
             </div>
