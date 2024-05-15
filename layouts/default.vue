@@ -25,14 +25,29 @@ const { data: restaurant } = useFetch('https://dev.gurmenu.com/api/v2/restaurant
             locale: 'tr'
         }
 })
+// CSS değişkenlerini ayarlayan fonksiyon
+const setCSSVariables = (restaurantColor) => {
+  if (restaurantColor) {
+    document.documentElement.style.setProperty('--restaurant-color', restaurantColor);
+  }
+}
 
+// Bileşen yüklendiğinde CSS değişkenlerini ayarla
+onMounted(() => {
+  setCSSVariables(restaurant?.value?.data?.restaurant_color);
+})
+
+// Restaurant verisi değiştiğinde CSS değişkenlerini güncelle
+watch(() => restaurant.value?.data?.restaurant_color, (newColor) => {
+  setCSSVariables(newColor);
+})
 
 </script>
 <style>
 :root {
     --light: #ffffff;
     --dark: #000;
-    --restaurant-color: #ff5400;
+    --restaurant-color: v-bind(restaurant.data.restaurant_color);
     --restaurant-theme: var(--dark);
     --text-right: end;
     --text-center: center;
